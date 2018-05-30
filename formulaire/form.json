@@ -1,0 +1,22 @@
+{
+    "Client3": {
+        "ville": "ville 3",
+        "adresse": "rue 3",
+        "nom": "nom3",
+        "prénom": "prenom3"
+    },
+
+
+    "Client2": {
+        "ville": "ville 2",
+        "adresse": "rue 2",
+        "nom": "nom2",
+        "prénom": "prenom2"
+    },
+    "Client1": {
+        "ville": "ville 1",
+        "adresse": "rue 1",
+        "nom": "nom1",
+        "prénom": "prenom1"
+    }
+}
