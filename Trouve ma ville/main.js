@@ -16,9 +16,9 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Toulouse,fr&appid=d5
 
 })
 
+$.getJSON('https://www.mapquestapi.com/directions/v2/route?key=kJMW14H6BTygUvmq6pVOTSspm5KKfvFb&from=Saint-gaudens&to=Toulouse&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false', function (data) {
+  $('#map').after('distance : '+data.route.legs[0].distance+' miles<br>');
+  $('#map').after('Temps estimé : '+data.route.legs[0].formattedTime+'<br>');
+});
 
-$.getJSON('http://api.timezonedb.com/v2/convert-time-zone?key=YOUR_API_KEY&format=json&from=America/Los_Angeles&to=Australia/Sydney&time=1464793200', function (data) {
-    console.log(data);
-
-})
-'http://api.timezonedb.com/v2/convert-time-zone?key=YOUR_API_KEY&format=json&from=America/Los_Angeles&to=Australia/Sydney&time=1464793200'
+	//    YOUR_API_KEY mapquest kJMW14H6BTygUvmq6pVOTSspm5KKfvFb
