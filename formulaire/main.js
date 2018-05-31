@@ -27,28 +27,28 @@ function myFunction(response) {
     })
 
     $('#optionTest3').click(function () {
-        $('#part1').html(arr.Client1.nom);
-        $('#part2').html(arr.Client1.prénom);
-        $('#part3').html(arr.Client1.adresse);
-        $('#part4').html(arr.Client1.ville);
+        $('#part1').html('Nom : '+arr.Client1.nom);
+        $('#part2').html('Prenom : '+arr.Client1.prénom);
+        $('#part3').html('Adresse : '+arr.Client1.adresse);
+        $('#part4').html('Ville : '+arr.Client1.ville);
 
 
     });
 
     $('#optionTest2').click(function () {
-        $('#part1').html(arr.Client2.nom);
-        $('#part2').html(arr.Client2.prénom);
-        $('#part3').html(arr.Client2.adresse);
-        $('#part4').html(arr.Client2.ville);
+        $('#part1').html('Nom : '+arr.Client2.nom);
+        $('#part2').html('Prenom : '+arr.Client2.prénom);
+        $('#part3').html('Adresse : '+arr.Client2.adresse);
+        $('#part4').html('Ville : '+arr.Client2.ville);
 
 
     });
 
     $('#optionTest1').click(function () {
-        $('#part1').html(arr.Client3.nom);
-        $('#part2').html(arr.Client3.prénom);
-        $('#part3').html(arr.Client3.adresse);
-        $('#part4').html(arr.Client3.ville);
+        $('#part1').html('Nom : '+arr.Client3.nom);
+        $('#part2').html('Prenom : '+arr.Client3.prénom);
+        $('#part3').html('Adresse : '+arr.Client3.adresse);
+        $('#part4').html('Ville : '+arr.Client3.ville);
 
 
     });
