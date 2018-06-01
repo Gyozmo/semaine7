@@ -6,15 +6,23 @@
 // Stocker les données récupérées. Ce peut être l'occasion de jeter un oeil au localStorage introduit par HTML5.
 // Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
 
-
-
+let userValue = {};
+let i=0
 let byName = document.getElementsByName;
 
 // let store = byId('store');
 console.log(document.getElementById('send'));
+document.getElementsByName
 
-function hello(){
-    console.log('hello');
-    
+function sendInfo(){
+    let userValue = {};
+    localStorage.setItem('login'+(++i), userValue)
 }
+
+function clearInfo(){
+    localStorage.clear();
+}
+
+console.log(localStorage.getItem('login'));
+
 
