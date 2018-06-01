@@ -9,10 +9,10 @@ let weather = "api.openweathermap.org/data/2.5/weather?q=Toulouse,fr&appid=d58b2
 //     }
 //   });
 
-$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Toulouse,fr&appid=d58b214415a07a0b03c33ff4a8eb49e1', function (data) {
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Toulouse,fr&appid=d58b214415a07a0b03c33ff4a8eb49e1&units=metric', function (data) {
     $('#meteo').after('latitude : '+data.coord.lat+'<br>');
     $('#meteo').after('longitude : '+data.coord.lon+'<br>');
-    $('#meteo').after('temps : '+data.weather[0].main+'<br>');
+    $('#meteo').after(' temperature : '+data.main.temp +'°C météo : '+data.weather[0].main+'<br>');
 
 })
 
