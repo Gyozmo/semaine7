@@ -1,28 +1,22 @@
-// Gestion d'utilisateurs
-
-// Créez un formulaire d'inscription. Dans celui-ci l'utilisateur est invité à saisir : nom, prénom, login (ne doit pas déjà être utilisé), sexe (bouton radio), mot de passe (au moins huit caractères dont au moins une majuscule, un caractère spécial et un chiffre), date de naissance, ville, mail (valide), url de son site (valide), ses hobbys (max 200 caractères), son numéro de téléphone (XX.XX.XX.XX.XX) ainsi que sa couleur préférée.
-// Bonus : implémenter l'autocomplétion pour la ville.
-// Bonus 2: pas besoin de soumettre le formulaire pour contrôler les champs.
-// Stocker les données récupérées. Ce peut être l'occasion de jeter un oeil au localStorage introduit par HTML5.
-// Créez un formulaire de connexion. L'utilisation saisit un login et un mdp. Si les deux correspondent, on l'autorise à se connecter et on l'accueille avec un message du type : "Bienvenue <prénom> ".
-
-let userValue = {};
-let i=0
+let i = 0;
 let byName = document.getElementsByName;
 
-// let store = byId('store');
-console.log(document.getElementById('send'));
-document.getElementsByName
+function sendInfo() {
 
-function sendInfo(){
-    let userValue = {};
-    localStorage.setItem('login'+(++i), userValue)
+    //add value
+    let userValue = {
+        'test': 'test1',
+        'test2': 'test2'
+    };
+    localStorage.setItem('login' + (++i), JSON.stringify(userValue))
+
+    //get value
+    let userkey = localStorage.getItem('login1')
+    console.log(JSON.parse(userkey));
+
 }
 
-function clearInfo(){
+function clearInfo() {
     localStorage.clear();
+    i = 0;
 }
-
-console.log(localStorage.getItem('login'));
-
-
