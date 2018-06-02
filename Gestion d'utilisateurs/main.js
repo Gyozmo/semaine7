@@ -1,5 +1,13 @@
 let i = 0;
-let byName = document.getElementsByName;
+let login = document.getElementsByName('login');
+
+function sendValue() {
+    console.log(login.value);
+    
+    
+    
+    
+}
 
 function sendInfo() {
 
