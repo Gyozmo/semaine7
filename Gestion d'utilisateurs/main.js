@@ -13,20 +13,22 @@ function sendValue() {
   let hobbysValue = document.getElementsByName('hobbys')[0].value;
   let telephoneValue = document.getElementsByName('telephone')[0].value;
   let colorValue = document.getElementsByName('color')[0].value;
-  let i=0;
 
 let userValue = {
-  "login": loginValue,
-  "mdp": mdpValue,
-  "lastname": lastnameValue,
-  "firstname": firstnameValue,
-  "date": dateValue,
-  "email": emailValue,
-  "website": websiteValue,
-  "hobbys": hobbysValue,
-  "telephone": telephoneValue,
-  "color": colorValue,
-  "login": loginValue,
+  "superuser" : 
+            {
+              "login": loginValue,
+              "mdp": mdpValue,
+              "lastname": lastnameValue,
+              "firstname": firstnameValue,
+              "date": dateValue,
+              "email": emailValue,
+              "website": websiteValue,
+              "hobbys": hobbysValue,
+              "telephone": telephoneValue,
+              "color": colorValue,
+              "login": loginValue,
+            }
 }
 
 localStorage.setItem('login' + (++i) )
