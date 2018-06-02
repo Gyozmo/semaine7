@@ -2,7 +2,7 @@ let i = 0;
 // let login = document.getElementsByName('login')[0].value;
 
 function sendValue() {
-  let loginValue = document.getElementsByName('login')[0].value;
+  let loginValue = document.getElementsByName('logintest')[0].value;
   let mdpValue = document.getElementsByName('password')[0].value;
   let lastnameValue = document.getElementsByName('nom')[0].value;
   let firstnameValue =  document.getElementsByName('prenom')[0].value;
@@ -15,7 +15,7 @@ function sendValue() {
   let colorValue = document.getElementsByName('color')[0].value;
 
 let userValue = {
-    "login": mdpValue,
+    "userlogin": loginValue+(i),
     "mdp": mdpValue,
     "lastname": lastnameValue,
     "firstname": firstnameValue,
@@ -28,12 +28,34 @@ let userValue = {
     "login": loginValue,
 };
 
+
+
 localStorage.setItem('login' + (++i), JSON.stringify(userValue))
 
-let userkey = localStorage.getItem('login')
+let userkey = localStorage.getItem('login'+i)
+let userkey2 = localStorage.getItem('login1'.userlogin)
 console.log(JSON.parse(userkey));
 
 }
+
+function clearInfo() {
+  localStorage.clear();
+  i = 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // sendValue()
 //
@@ -51,8 +73,3 @@ console.log(JSON.parse(userkey));
 //     console.log(JSON.parse(userkey));
 //
 // }
-
-function clearInfo() {
-    localStorage.clear();
-    i = 0;
-}
