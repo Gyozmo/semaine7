@@ -15,43 +15,42 @@ function sendValue() {
   let colorValue = document.getElementsByName('color')[0].value;
 
 let userValue = {
-  "superuser" : 
-            {
-              "login": loginValue,
-              "mdp": mdpValue,
-              "lastname": lastnameValue,
-              "firstname": firstnameValue,
-              "date": dateValue,
-              "email": emailValue,
-              "website": websiteValue,
-              "hobbys": hobbysValue,
-              "telephone": telephoneValue,
-              "color": colorValue,
-              "login": loginValue,
-            }
-}
+    "login": mdpValue,
+    "mdp": mdpValue,
+    "lastname": lastnameValue,
+    "firstname": firstnameValue,
+    "date": dateValue,
+    "email": emailValue,
+    "website": websiteValue,
+    "hobbys": hobbysValue,
+    "telephone": telephoneValue,
+    "color": colorValue,
+    "login": loginValue,
+};
 
-localStorage.setItem('login' + (++i) )
+localStorage.setItem('login' + (++i), JSON.stringify(userValue))
 
+let userkey = localStorage.getItem('login')
+console.log(JSON.parse(userkey));
 
 }
 
 // sendValue()
-
-function sendInfo() {
-
-    //add value
-    let userValue = {
-        'test': 'test1',
-        'test2': 'test2'
-    };
-    localStorage.setItem('login' + (++i), JSON.stringify(userValue))
-
-    //get value
-    let userkey = localStorage.getItem('login1')
-    console.log(JSON.parse(userkey));
-
-}
+//
+// function sendInfo() {
+//
+//     //add value
+//     let userValue = {
+//         'test': 'test1',
+//         'test2': 'test2'
+//     };
+//     localStorage.setItem('login' + (++i), JSON.stringify(userValue))
+//
+//     //get value
+//     let userkey = localStorage.getItem('login1')
+//     console.log(JSON.parse(userkey));
+//
+// }
 
 function clearInfo() {
     localStorage.clear();
