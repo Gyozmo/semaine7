@@ -1,13 +1,40 @@
 let i = 0;
-let login = document.getElementsByName('login');
+// let login = document.getElementsByName('login')[0].value;
 
 function sendValue() {
-    console.log(login.value);
-    
-    
-    
-    
+  let loginValue = document.getElementsByName('login')[0].value;
+  let mdpValue = document.getElementsByName('password')[0].value;
+  let lastnameValue = document.getElementsByName('nom')[0].value;
+  let firstnameValue =  document.getElementsByName('prenom')[0].value;
+  let dateValue = document.getElementsByName('birthday')[0].value;
+  let villeValue = document.getElementsByName('ville')[0].value;
+  let emailValue = document.getElementsByName('email')[0].value;
+  let websiteValue = document.getElementsByName('siteweb')[0].value;
+  let hobbysValue = document.getElementsByName('hobbys')[0].value;
+  let telephoneValue = document.getElementsByName('telephone')[0].value;
+  let colorValue = document.getElementsByName('color')[0].value;
+  let i=0;
+
+let userValue = {
+  "login": loginValue,
+  "mdp": mdpValue,
+  "lastname": lastnameValue,
+  "firstname": firstnameValue,
+  "date": dateValue,
+  "email": emailValue,
+  "website": websiteValue,
+  "hobbys": hobbysValue,
+  "telephone": telephoneValue,
+  "color": colorValue,
+  "login": loginValue,
 }
+
+localStorage.setItem('login' + (++i) )
+
+
+}
+
+// sendValue()
 
 function sendInfo() {
 
