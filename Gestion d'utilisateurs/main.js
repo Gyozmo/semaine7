@@ -29,12 +29,17 @@ let userValue = {
 };
 
 
+//stringify
+localStorage.setItem('login', JSON.stringify(userValue))
 
-localStorage.setItem('login' + (++i), JSON.stringify(userValue))
+//store key
+let userkey = localStorage.getItem('login')
 
-let userkey = localStorage.getItem('login'+i)
-let userkey2 = localStorage.getItem('login1'.userlogin)
-console.log(JSON.parse(userkey));
+//parse key
+let parsedKey = JSON.parse(userkey);
+
+//get key value
+console.log(parsedKey.mdp);
 
 }
 
