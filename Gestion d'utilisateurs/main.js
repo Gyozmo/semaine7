@@ -37,7 +37,7 @@ if (loginValue !== localStorage.getItem(loginValue)) {
 localStorage.setItem(loginValue, JSON.stringify(userValue))
 
 //store key
-let userkey = localStorage.getItem('login')
+let userkey = localStorage.getItem(loginValue)
 
 //parse key
 let parsedKey = JSON.parse(userkey);
