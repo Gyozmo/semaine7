@@ -30,7 +30,11 @@ let userValue = {
 
 
 //stringify
-localStorage.setItem('login', JSON.stringify(userValue))
+if (loginValue !== localStorage.getItem(loginValue)) {
+  alert( 'bienvenue '+loginValue+' !')
+
+
+localStorage.setItem(loginValue, JSON.stringify(userValue))
 
 //store key
 let userkey = localStorage.getItem('login')
@@ -41,6 +45,9 @@ let parsedKey = JSON.parse(userkey);
 //get key value
 console.log(parsedKey.mdp);
 
+} else {
+  alert('pb')
+}
 }
 
 function clearInfo() {
